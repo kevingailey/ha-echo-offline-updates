@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Echo Kiosk Offline Updates",
+        "description": "Mirrors LineageOS Echo image releases (and optionally Kiosk Satellite APKs) into Home Assistant's web server so devices on a network without internet access can update from Home Assistant instead of GitHub.",
+        "data": {
+          "release_repo": "GitHub repository with the device images",
+          "base_url": "Base URL the devices use to reach Home Assistant",
+          "devices": "Device codenames (e.g. biscuit cronos crown)",
+          "www_subdir": "Folder name under the Home Assistant www directory",
+          "interval_hours": "Hours between update checks",
+          "mirror_kiosk_satellite": "Also mirror Kiosk Satellite releases",
+          "kiosk_repo": "Kiosk Satellite repository",
+          "kiosk_universal_only": "Kiosk Satellite: mirror only the universal APK"
+        }
+      }
+    },
+    "error": {
+      "invalid_repo": "GitHub repository not found - check owner/name.",
+      "rate_limited": "GitHub API rate limit hit - try again later.",
+      "cannot_connect": "Could not reach GitHub.",
+      "invalid_devices": "Codenames may only contain lowercase letters, digits, dashes and underscores.",
+      "invalid_subdir": "Folder name may only contain letters, digits, dashes and underscores.",
+      "invalid_base_url": "Enter a URL starting with http:// or https://."
+    },
+    "abort": {
+      "already_configured": "This repository is already being mirrored."
+    }
+  },
+  "services": {
+    "sync": {
+      "name": "Sync mirror now",
+      "description": "Checks GitHub immediately and refreshes the mirrored folder."
+    },
+    "adb_commands": {
+      "name": "Device setup commands",
+      "description": "Returns the commands to point each device at the mirrored folder."
+    }
+  }
+}

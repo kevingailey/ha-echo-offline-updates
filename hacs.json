@@ -1,0 +1,5 @@
+{
+  "name": "Echo Kiosk Offline Updates",
+  "render_readme": true,
+  "homeassistant": "2024.9.0"
+}

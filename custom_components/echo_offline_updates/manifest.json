@@ -1,0 +1,12 @@
+{
+  "domain": "echo_offline_updates",
+  "name": "Echo Kiosk Offline Updates",
+  "codeowners": ["@kevingailey"],
+  "config_flow": true,
+  "documentation": "https://github.com/kevingailey/ha-echo-offline-updates",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/kevingailey/ha-echo-offline-updates/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
