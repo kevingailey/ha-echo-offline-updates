@@ -2,4 +2,3 @@ sync:
   fields: {}
 adb_commands:
   fields: {}
-  supports_response: true
